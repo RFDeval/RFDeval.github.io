@@ -34,9 +34,9 @@
 </head>
 <body style='margin : 0px; overflow: hidden;'>
     <!-- minimal loader shown until image descriptors are loaded -->
-   <div class="arjs-loader">
+   <!-- <div class="arjs-loader">
      <div>Loading, please wait...</div>
-   </div>
+   </div> -->
      <a-scene
          vr-mode-ui='enabled: false;'
          renderer="logarithmicDepthBuffer: true;"
@@ -44,7 +44,7 @@
  
          <!-- use rawgithack to retrieve the correct url for nft marker (see 'pinball' below) -->
          <a-nft
-             type='nft' url='trex/trex-image/trex'
+             type='nft' url='https://rfdeval.github.io/arjs-public/trex/trex-image/trex'
              smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
              <a-entity
                  gltf-model='trex/scene.gltf'
