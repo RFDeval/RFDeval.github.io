@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>GeoAR.js demo</title>
+    <script type='text/javascript' src="js/aframe-master.min.js"></script>
+    <script type='text/javascript' src='js/aframe-ar-nft.js'></script>
+</head>
+
+<body style='margin: 0; overflow: hidden;'>
+    <a-scene
+        vr-mode-ui="enabled: false"
+		arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false;'>
+
+  
+        <a-box material="color: red;" scale="5 5 5" gps-entity-place="latitude: 115.986460; longitude: 39.490949;"></a-box> 
+
+        <a-image src="place.png" gps-entity-place="latitude: 115.986558; longitude: 39.490929;"></a-image> 
+
+        <a-image src="place.png" gps-entity-place="latitude: 115.986673; longitude: 39.490922;"></a-image>
+
+        <a-image src="place.png" gps-entity-place="latitude: 115.986771; longitude: 39.490908;"></a-image>
+        <!-- using gpsMinDistance: 5 => update GPS only if user moves by 5 meters or more => avoid shaking for near objects -->
+        <!-- using accelerationToMove: 1.0 => 'smooth' inertial sensors precision precision in order to avoid distant places shaking -->
+        <a-camera
+            rotation-reader
+            gps-camera="simulateLatitude: 115.986860; simulateLongitude: 39.490911; gpsMinDistance: 5;"
+        >
+		</a-camera>
+	</a-scene>
+</body>
+
