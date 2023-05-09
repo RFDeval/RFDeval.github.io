@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>AR.js A-Frame</title>
+	<title>获取当前GPS坐标</title>
 	<script src="../../../trd-js/aframe.min1.3.js"></script>
 	<!-- Assumes AR.js build is in the 'AR.js' directory -->
 	<script type='text/javascript' src="../../../js-assets/ar-threex-location-only.js"></script>
@@ -16,9 +16,7 @@
 	</a-scene>
 	<div id='setloc'
 		style='position:absolute; left: 10px; bottom: 2%; z-index:999; background-color: blue; color: white; padding: 10px'>
-		Lat:<input id="lat" value="39.898965" /></br>
-		Lon:<input id="lon" value="116.210221" /></br>
-		Min Acc: <input id='minacc' value='1000' /> <input type='button' id='go' value='go' />
+		gps:<label id="gpsLab"></label>
 	</div>
 </body>
 
