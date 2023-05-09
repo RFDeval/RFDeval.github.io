@@ -4,8 +4,7 @@ window.onload = () => {
     const el = document.querySelector("[gps-new-camera]");
     el.addEventListener("gps-camera-update-position", e => {
         if(!testEntitiesAdded) {
-            document.getElementById("gpsLab").innerHTML="gps is: " + e.detail.position.latitude + "," + e.detail.position.longitude;
-            //alert(`Got first GPS position: lon ${e.detail.position.longitude} lat ${e.detail.position.latitude}`);
+            alert(`Got first GPS position: lon ${e.detail.position.longitude} lat ${e.detail.position.latitude}`);
             // Add four boxes to the north (red), south (yellow), west (blue)
             // and east (red) of the initial GPS position
             const properties = [{
@@ -46,10 +45,10 @@ window.onload = () => {
     });
 
     document.getElementById("go").addEventListener("click", e=> {
-        var lat = document.getElementById('lat').value;
-        var lon = document.getElementById('lon').value;
-        var minacc = document.getElementById('minacc').value;
-        alert("change gps value:"+lat+","+lon+","+minacc);
+        const lat = document.getElementById('lat').value;
+        const lon = document.getElementById('lon').value;
+        const minacc = document.getElementById('minacc').value;
+
         el.setAttribute('gps-new-camera', { simulateLatitude: lat, simulateLongitude: lon, positionMinAccuracy: minacc } );
     });
 };
