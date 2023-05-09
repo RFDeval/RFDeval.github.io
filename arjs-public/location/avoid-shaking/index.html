@@ -10,28 +10,21 @@
 <body style='margin: 0; overflow: hidden;'>
     <a-scene
         vr-mode-ui="enabled: false"
-		arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false;'>
-
-  
-        <a-box material="color: red;" scale="20 20 20" gps-entity-place="latitude:39.898965; longitude:116.210357;" position="0 10 0"></a-box> 
-
-        <a-image src="place.png" gps-entity-place="latitude:39.898965; longitude:116.210290;"></a-image> 
-
-        <a-image src="place.png" gps-entity-place="latitude:39.898965; longitude:116.210223;"></a-image>
-
-        <a-image src="place.png" gps-entity-place="latitude: ; longitude: ;"></a-image>
+		arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: true;'>
+        <a-box material="color: red;" scale="20 20 20" gps-entity-place="latitude: 39.898965; longitude: 116.210357;" position="0 10 0"></a-box> 
+        <a-image src="place.png" gps-entity-place="latitude: 39.898965; longitude: 116.210290;"></a-image> 
+        <a-image src="place.png" gps-entity-place="latitude: 39.898965; longitude: 116.210223;"></a-image>
+        <a-image src="place.png" gps-entity-place="latitude: 39.898891; longitude: 116.210221;"></a-image>
         <!-- using gpsMinDistance: 5 => update GPS only if user moves by 5 meters or more => avoid shaking for near objects -->
         <!-- using accelerationToMove: 1.0 => 'smooth' inertial sensors precision precision in order to avoid distant places shaking -->
-        
         <a-text
         value="Hello AR"
         look-at="[gps-camera]"
         scale="120 120 120"
-        gps-entity-place="latitude:39.898930; longitude:116.210217;"></a-text>
-
+        gps-entity-place="latitude: 39.898930; longitude: 116.210217;"></a-text>
         <a-camera
             rotation-reader
-            gps-camera="simulateLatitude:39.898965; simulateLongitude:116.210416; gpsMinDistance: 0;"
+            gps-camera="simulateLatitude:39.898965; simulateLongitude: 116.210416; simulateAltitude: 20; minDistance: 5;"
         >
 		</a-camera>
 	</a-scene>
