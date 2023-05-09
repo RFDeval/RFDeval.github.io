@@ -7,6 +7,7 @@
 	<!-- Assumes AR.js build is in the 'AR.js' directory -->
 	<script type='text/javascript' src="../../../js-assets/ar-threex-location-only.js"></script>
 	<script type='text/javascript' src='../../../js-assets/aframe-ar.js'></script>
+	<script src='index.js'></script>
 </head>
 
 <body>
@@ -21,6 +22,11 @@
 		<a-camera look-controls-enabled='false' arjs-device-orientation-controls='smoothingFactor:0.1'
 			gps-new-camera='gpsMinDistance: 1'></a-camera>
 	</a-scene>
+
+	<div id='setloc'
+	style='position:absolute; left: 10px; bottom: 2%; z-index:999; background-color: blue; color: white; padding: 10px'>
+	gps:<label id="gpsLab">gps is:</label>
+</div>
 
 </body>
 
