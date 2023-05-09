@@ -3,11 +3,6 @@ window.onload = () => {
     el.addEventListener("gps-camera-update-position", e => {
         document.getElementById("gpsLab").innerHTML = "gps is: " + e.detail.position.latitude + "," + e.detail.position.longitude;
        
-        document.getElementById("en1").setAttribute('gps-new-entity-place', {
-            latitude: e.detail.position.latitude + 0.001,
-            longitude: e.detail.position.longitude
-        });
-
        
         document.getElementById("bar1").setAttribute('gps-new-entity-place', {
             latitude: e.detail.position.latitude + 0.001,

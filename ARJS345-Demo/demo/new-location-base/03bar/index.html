@@ -12,15 +12,12 @@
 <body>
 	<a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false'
 		renderer='antialias: true; alpha: true'>
-		<a-entity id="en1">
-			<a-cylinder id="bar1" radius="10" height="100" material="color: red;" ></a-cylinder>
-			<a-text look-at="gps-new-camera" scale="100,100,100" value="111" align="center"></a-text>
-		</a-entity>
 	
-		<a-cylinder id="bar2" radius="10" height="100" material="color: yellow;"></a-cylinder>
-		<a-cylinder id="bar3" radius="10" height="100" material="color: blue;" ></a-cylinder>
-		<a-cylinder id="bar4" radius="10" height="100" material="color: yellow;"></a-cylinder>
-		<a-cylinder id="bar5" radius="10" height="100" material="color: blue;"></a-cylinder>
+		<a-cylinder id="bar1" radius="10" height="100" material="color: red;" >111</a-cylinder>
+		<a-cylinder id="bar2" radius="10" height="100" material="color: yellow;">222</a-cylinder>
+		<a-cylinder id="bar3" radius="10" height="100" material="color: blue;" >333</a-cylinder>
+		<a-cylinder id="bar4" radius="10" height="100" material="color: yellow;">444</a-cylinder>
+		<a-cylinder id="bar5" radius="10" height="100" material="color: blue;">555</a-cylinder>
 		<a-camera look-controls-enabled='false' arjs-device-orientation-controls='smoothingFactor:0.1'
 			gps-new-camera='gpsMinDistance: 1'></a-camera>
 	</a-scene>
