@@ -8,48 +8,48 @@ window.onload = () => {
             //alert(`Got first GPS position: lon ${e.detail.position.longitude} lat ${e.detail.position.latitude}`);
             // Add four boxes to the north (red), south (yellow), west (blue)
             // and east (red) of the initial GPS position
-            const properties = [{
-                    color: 'red',
-                    latDis: 0.001,
-                    lonDis: 0
-                },{
-                    color: 'yellow',
-                    latDis: -0.001,
-                    lonDis: 0
-                },{
-                    color: 'blue',
-                    latDis: 0,
-                    lonDis: -0.001
-                },{
-                    color: 'green',
-                    latDis: 0,
-                    lonDis: 0.001
-                }
-            ];
-            for(const prop of properties) {
-                const entity = document.createElement("a-box");
-                entity.setAttribute("scale", {
-                    x: 20, 
-                    y: 20,
-                    z: 20
-                });
-                entity.setAttribute('material', { color: prop.color } );
-                entity.setAttribute('gps-new-entity-place', {
-                    latitude: e.detail.position.latitude + prop.latDis,
-                    longitude: e.detail.position.longitude + prop.lonDis
-                });
+            // const properties = [{
+            //         color: 'red',
+            //         latDis: 0.001,
+            //         lonDis: 0
+            //     },{
+            //         color: 'yellow',
+            //         latDis: -0.001,
+            //         lonDis: 0
+            //     },{
+            //         color: 'blue',
+            //         latDis: 0,
+            //         lonDis: -0.001
+            //     },{
+            //         color: 'green',
+            //         latDis: 0,
+            //         lonDis: 0.001
+            //     }
+            // ];
+            // for(const prop of properties) {
+            //     const entity = document.createElement("a-box");
+            //     entity.setAttribute("scale", {
+            //         x: 20, 
+            //         y: 20,
+            //         z: 20
+            //     });
+            //     entity.setAttribute('material', { color: prop.color } );
+            //     entity.setAttribute('gps-new-entity-place', {
+            //         latitude: e.detail.position.latitude + prop.latDis,
+            //         longitude: e.detail.position.longitude + prop.lonDis
+            //     });
                 
-                document.querySelector("a-scene").appendChild(entity);
-            }
-            testEntitiesAdded = true;
+            //     document.querySelector("a-scene").appendChild(entity);
+            // }
+            // testEntitiesAdded = true;
         }
     });
 
-    document.getElementById("go").addEventListener("click", e=> {
-        var lat = document.getElementById('lat').value;
-        var lon = document.getElementById('lon').value;
-        var minacc = document.getElementById('minacc').value;
-        alert("change gps value:"+lat+","+lon+","+minacc);
-        el.setAttribute('gps-new-camera', { simulateLatitude: lat, simulateLongitude: lon, positionMinAccuracy: minacc } );
-    });
+    // document.getElementById("go").addEventListener("click", e=> {
+    //     var lat = document.getElementById('lat').value;
+    //     var lon = document.getElementById('lon').value;
+    //     var minacc = document.getElementById('minacc').value;
+    //    // alert("change gps value:"+lat+","+lon+","+minacc);
+    //     el.setAttribute('gps-new-camera', { simulateLatitude: lat, simulateLongitude: lon, positionMinAccuracy: minacc } );
+    // });
 };
