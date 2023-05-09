@@ -13,18 +13,25 @@
 		arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false;'>
 
   
-        <a-box material="color: red;" scale="5 5 5" gps-entity-place="latitude: 115.986460; longitude: 39.490949;"></a-box> 
+        <a-box material="color: red;" scale="20 20 20" gps-entity-place="latitude:39.898965; longitude:116.210357;" position="0 10 0"></a-box> 
 
-        <a-image src="place.png" gps-entity-place="latitude: 115.986558; longitude: 39.490929;"></a-image> 
+        <a-image src="place.png" gps-entity-place="latitude:39.898965; longitude:116.210290;"></a-image> 
 
-        <a-image src="place.png" gps-entity-place="latitude: 115.986673; longitude: 39.490922;"></a-image>
+        <a-image src="place.png" gps-entity-place="latitude:39.898965; longitude:116.210223;"></a-image>
 
-        <a-image src="place.png" gps-entity-place="latitude: 115.986771; longitude: 39.490908;"></a-image>
+        <a-image src="place.png" gps-entity-place="latitude: ; longitude: ;"></a-image>
         <!-- using gpsMinDistance: 5 => update GPS only if user moves by 5 meters or more => avoid shaking for near objects -->
         <!-- using accelerationToMove: 1.0 => 'smooth' inertial sensors precision precision in order to avoid distant places shaking -->
+        
+        <a-text
+        value="Hello AR"
+        look-at="[gps-camera]"
+        scale="120 120 120"
+        gps-entity-place="latitude:39.898930; longitude:116.210217;"></a-text>
+
         <a-camera
             rotation-reader
-            gps-camera="simulateLatitude: 115.986860; simulateLongitude: 39.490911; gpsMinDistance: 5;"
+            gps-camera="simulateLatitude:39.898965; simulateLongitude:116.210416; gpsMinDistance: 0;"
         >
 		</a-camera>
 	</a-scene>
