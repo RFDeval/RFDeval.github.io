@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>AR.js A-Frame</title>
+	<title>AR.js no shaking</title>
 	<script type='text/javascript' src="../../../trd-js/aframe.min1.3.js"></script>
 	<!-- Assumes AR.js build is in the 'AR.js' directory -->
 	<script type='text/javascript' src="../../../js-assets/ar-threex-location-only.js"></script>
@@ -14,7 +14,7 @@
 	<a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false'
 		renderer='antialias: true; alpha: true'>
 		<a-camera look-controls-enabled='false' arjs-device-orientation-controls='smoothingFactor:0.1'
-			gps-new-camera='gpsMinDistance: 5'></a-camera>
+			gps-new-camera='gpsMinDistance: 1'></a-camera>
 	</a-scene>
 	<div id='setloc'
 		style='position:absolute; left: 10px; bottom: 2%; z-index:999; background-color: blue; color: white; padding: 10px'>
